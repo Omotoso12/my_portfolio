@@ -186,7 +186,7 @@ class End extends StatelessWidget {
                     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                     Padding(
                       padding: EdgeInsets.only(
-                          top: MediaQuery.sizeOf(context).width * 0.1),
+                          top: MediaQuery.sizeOf(context).width * 0.07),
                       child: SizedBox(
                         width: MediaQuery.sizeOf(context).width * 0.2,
                         height: MediaQuery.sizeOf(context).width * 0.2,
@@ -199,13 +199,13 @@ class End extends StatelessWidget {
                                 width: MediaQuery.sizeOf(context).width * 0.1,
                                 height: MediaQuery.sizeOf(context).width * 0.02,
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8),
-                                  color: Colors.red,
+                                  borderRadius: BorderRadius.circular(16.0),
+                                  color: const Color.fromARGB(255, 35, 41, 61),
                                 ),
                                 child: Center(
                                   child: SizedBox(
                                       width:
-                                         MediaQuery.sizeOf(context).width * 0.07,
+                                         MediaQuery.sizeOf(context).width * 0.06,
                                       height:
                                           MediaQuery.sizeOf(context).width * 0.01,
                                       child: const FittedBox(
@@ -213,7 +213,7 @@ class End extends StatelessWidget {
                                           child: Text(
                                             'Contact Me',
                                             style: TextStyle(
-                                                color: Color.fromARGB(255, 0, 0, 0),
+                                                color: Colors.white,
                                                 fontFamily: 'Inder'),
                                           )),
                                     ),
@@ -227,13 +227,13 @@ class End extends StatelessWidget {
                                 width: MediaQuery.sizeOf(context).width * 0.1,
                                 height: MediaQuery.sizeOf(context).width * 0.02,
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8),
-                                  color: Colors.red,
+                                  borderRadius: BorderRadius.circular(16.0),
+                                  color: const Color.fromARGB(255, 35, 41, 61),
                                 ),
                                 child: Center(
                                   child: SizedBox(
                                       width:
-                                         MediaQuery.sizeOf(context).width * 0.07,
+                                         MediaQuery.sizeOf(context).width * 0.06,
                                       height:
                                           MediaQuery.sizeOf(context).width * 0.01,
                                       child: const FittedBox(
@@ -241,7 +241,7 @@ class End extends StatelessWidget {
                                           child: Text(
                                             'Contact Me',
                                             style: TextStyle(
-                                                color: Color.fromARGB(255, 0, 0, 0),
+                                                color: Colors.white,
                                                 fontFamily: 'Inder'),
                                           )),
                                     ),
