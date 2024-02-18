@@ -1,7 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
+
+
+  final Uri twitterUrl = Uri(scheme: 'https',
+    host: 'twitter.com',
+    path: '/OmotosoOoreolu1/',);
+  final Uri gitUrl = Uri.parse('https://github.com/Omotoso12/');
+  final Uri linkedInUrl = Uri.parse('https://www.linkedin.com/in/ooreoluwa-omotoso-452b7522a/');
+  
 class SubSocial extends StatelessWidget {
   const SubSocial({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +32,7 @@ class SubSocial extends StatelessWidget {
             ),
 
             GestureDetector(
-              onTap: (){},
+              onTap: () => _launchTwitter(twitterUrl),
               child: SizedBox(
                 width: MediaQuery.sizeOf(context).width * 0.09,
                 height: MediaQuery.sizeOf(context).width * 0.03,
@@ -48,7 +58,7 @@ class SubSocial extends StatelessWidget {
             ),
 
             GestureDetector(
-              onTap: (){},
+              onTap: () => _launchGit(twitterUrl),
               child: SizedBox(
                 width: MediaQuery.sizeOf(context).width * 0.09,
                 height: MediaQuery.sizeOf(context).width * 0.03,
@@ -74,7 +84,7 @@ class SubSocial extends StatelessWidget {
             ),
 
             GestureDetector(
-              onTap: (){},
+              onTap: () => _launchLinkedIn(twitterUrl),
               child: SizedBox(
                 width: MediaQuery.sizeOf(context).width * 0.09,
                 height: MediaQuery.sizeOf(context).width * 0.03,
@@ -92,4 +102,33 @@ class SubSocial extends StatelessWidget {
       ),
     );
   }
+
+
 }
+
+  Future<void> _launchTwitter(Uri url) async {
+    if (!await launchUrl(
+      url,
+      webOnlyWindowName: "_self"
+    )){
+      throw Exception('Could not launch $url');
+    }
+  }
+
+  Future<void> _launchGit(Uri url) async {
+    if (!await launchUrl(
+      url,
+      webOnlyWindowName: "_self"
+      )){
+      throw Exception('Could not launch $url');
+    }
+  }
+
+  Future<void> _launchLinkedIn(Uri url) async {
+    if (!await launchUrl(
+      url,
+      webOnlyWindowName: "_self"
+      )){
+      throw Exception('Could not launch $url');
+    }
+  }

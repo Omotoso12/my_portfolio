@@ -52,20 +52,17 @@ class LessSubSocial extends StatelessWidget {
                   image: DecorationImage(
                       image: AssetImage('assets/maillogo.png'))),
             ),
-            GestureDetector(
-              onTap: () {},
-              child: SizedBox(
-                width: MediaQuery.sizeOf(context).width * 0.09,
-                height: MediaQuery.sizeOf(context).width * 0.03,
-                child: const FittedBox(
-                    fit: BoxFit.fill,
-                    child: Text(
-                      'Gmail   ',
-                      style: TextStyle(
-                          color: Color.fromARGB(255, 0, 0, 0),
-                          fontFamily: 'Inder'),
-                    )),
-              ),
+            SizedBox(
+              width: MediaQuery.sizeOf(context).width * 0.09,
+              height: MediaQuery.sizeOf(context).width * 0.03,
+              child: const FittedBox(
+                  fit: BoxFit.fill,
+                  child: Text(
+                    'Gmail   ',
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 0, 0, 0),
+                        fontFamily: 'Inder'),
+                  )),
             ),
           ]),
         ],

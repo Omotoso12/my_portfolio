@@ -1,10 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/intro_layout/sub_social_end.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../less_social.dart';
 
+
+const String whatsapp = "+2348103186480";
+final Uri whatsAppUrl = Uri.parse ("https://wa.me/$whatsapp?text=${Uri.parse("")}");
+
+final Uri gmailUrl = Uri(
+  scheme: 'mailto',
+  path: 'omotosoadetoso@gmail.com',
+  query: 'subject=Explain your needs&body=${Uri.parse("")}',
+);
+final url = gmailUrl.toString();
+final urlPath = Uri.parse(url);
+
 class End extends StatelessWidget {
   const End({super.key});
+
+  
 
   @override
   Widget build(BuildContext context) {
@@ -183,7 +198,7 @@ class End extends StatelessWidget {
                         ),
                       ),
                     ),
-                    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                    ////////////whatsapp contact me////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                     Padding(
                       padding: EdgeInsets.only(
                           top: MediaQuery.sizeOf(context).width * 0.07),
@@ -194,7 +209,7 @@ class End extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             GestureDetector(
-                              onTap: (){},
+                              onTap: ()=> _launchWhatsapp(whatsAppUrl),
                               child: Container(
                                 width: MediaQuery.sizeOf(context).width * 0.1,
                                 height: MediaQuery.sizeOf(context).width * 0.02,
@@ -220,9 +235,9 @@ class End extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            
+                            ////////////gmail contact me////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                             GestureDetector(
-                              onTap: (){},
+                              onTap:  ()=> _launchGmail(urlPath),
                               child: Container(
                                 width: MediaQuery.sizeOf(context).width * 0.1,
                                 height: MediaQuery.sizeOf(context).width * 0.02,
@@ -262,4 +277,23 @@ class End extends StatelessWidget {
       ],
     );
   }
+
+  Future<void> _launchWhatsapp(Uri url) async {
+    if (!await launchUrl(
+      url,
+      webOnlyWindowName: "_self"
+      )){
+      throw Exception('Could not launch $url');
+    }
+  }
+
+  Future<void> _launchGmail(Uri url) async {
+    if (!await launchUrl(
+      url,
+      webOnlyWindowName: "_self"
+      )){
+      throw Exception('Could not launch $url');
+    }
+  }
+
 }
