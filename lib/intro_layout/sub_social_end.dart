@@ -58,7 +58,7 @@ class SubSocial extends StatelessWidget {
             ),
 
             GestureDetector(
-              onTap: () => _launchGit(twitterUrl),
+              onTap: () => _launchGit(gitUrl),
               child: SizedBox(
                 width: MediaQuery.sizeOf(context).width * 0.09,
                 height: MediaQuery.sizeOf(context).width * 0.03,
@@ -84,7 +84,7 @@ class SubSocial extends StatelessWidget {
             ),
 
             GestureDetector(
-              onTap: () => _launchLinkedIn(twitterUrl),
+              onTap: () => _launchLinkedIn(linkedInUrl),
               child: SizedBox(
                 width: MediaQuery.sizeOf(context).width * 0.09,
                 height: MediaQuery.sizeOf(context).width * 0.03,
