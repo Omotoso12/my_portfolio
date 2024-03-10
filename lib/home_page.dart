@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 157, 173, 229),
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -72,7 +72,7 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.symmetric(
                   horizontal: MediaQuery.sizeOf(context).width * 0.02),
               child: const Divider(
-                color: Colors.white,
+                color: Color.fromARGB(255, 157, 173, 229),
                 thickness: 2.0,
               ),
             ),
@@ -104,7 +104,7 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.symmetric(
                   horizontal: MediaQuery.sizeOf(context).width * 0.02),
               child: const Divider(
-                color: Colors.white,
+                color: Color.fromARGB(255, 157, 173, 229),
                 thickness: 2.0,
               ),
             ),
@@ -139,7 +139,7 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.symmetric(
                   horizontal: MediaQuery.sizeOf(context).width * 0.02),
               child: const Divider(
-                color: Colors.white,
+                color: Color.fromARGB(255, 157, 173, 229),
                 thickness: 2.0,
               ),
             ),
@@ -158,7 +158,7 @@ class _HomePageState extends State<HomePage> {
             Container(
               width: MediaQuery.sizeOf(context).width,
               height: MediaQuery.sizeOf(context).width * 0.5,
-              color: Colors.white,
+              color: const Color.fromARGB(255, 157, 173, 229),
               child: const End(),
             )
           ],

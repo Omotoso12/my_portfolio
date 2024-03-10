@@ -215,7 +215,7 @@ class End extends StatelessWidget {
                                 height: MediaQuery.sizeOf(context).width * 0.02,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(16.0),
-                                  color: const Color.fromARGB(255, 35, 41, 61),
+                                  color: Colors.white,
                                 ),
                                 child: Center(
                                   child: SizedBox(
@@ -228,7 +228,7 @@ class End extends StatelessWidget {
                                           child: Text(
                                             'Contact Me',
                                             style: TextStyle(
-                                                color: Colors.white,
+                                                color: Color.fromARGB(255, 157, 173, 229),
                                                 fontFamily: 'Inder'),
                                           )),
                                     ),
@@ -243,7 +243,7 @@ class End extends StatelessWidget {
                                 height: MediaQuery.sizeOf(context).width * 0.02,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(16.0),
-                                  color: const Color.fromARGB(255, 35, 41, 61),
+                                  color: Colors.white,
                                 ),
                                 child: Center(
                                   child: SizedBox(
@@ -256,7 +256,7 @@ class End extends StatelessWidget {
                                           child: Text(
                                             'Contact Me',
                                             style: TextStyle(
-                                                color: Colors.white,
+                                                color:Color.fromARGB(255, 157, 173, 229),
                                                 fontFamily: 'Inder'),
                                           )),
                                     ),
